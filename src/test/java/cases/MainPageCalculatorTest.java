@@ -2,7 +2,10 @@ package cases;
 
 import com.codeborne.selenide.Selenide;
 import helpers.expressCalculation.ExpressCalculationHelper;
-import io.qameta.allure.*;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
+import io.qameta.allure.TmsLink;
 import org.openqa.selenium.html5.Location;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
