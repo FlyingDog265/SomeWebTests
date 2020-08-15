@@ -37,9 +37,9 @@ public class MainPageCalculatorTest extends WebSettings {
             cladrKalachinsk = "5500800100000000000000000";
 
     @Description("Калькулятор на главной. Отображение стоимости перевозки и возможности расчета при дефолтном направлении")
-    @TmsLink("376968")
+    @TmsLink("000028")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C376968() {
+    public final void test_000029() {
         step("Step 1. Открыть главную страницу сайта. Дождаться прогрузки калькулятора.", () ->
                 homePage
                         .openPage()
@@ -54,9 +54,9 @@ public class MainPageCalculatorTest extends WebSettings {
     }
 
     @Description("Калькулятор на главной. Интерфейс и взаимодействие элементов.")
-    @TmsLink("283801")
+    @TmsLink("000030")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C283801() {
+    public final void test_000030() {
         step("Step 1. Открыть главную страницу сайта. Дождаться прогрузки калькулятора.", () ->
                 homePage
                         .openPage()
@@ -188,9 +188,9 @@ public class MainPageCalculatorTest extends WebSettings {
     }
 
     @Description("Калькулятор на главной. Отображение стоимости по видам перевозки в соответствии с данными запроса к API. Между терминалами.")
-    @TmsLink("283802")
+    @TmsLink("000031")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C283802() {
+    public final void test_000031() {
         homePage
                 .openPage()
                 .waitFormLogoDellin()
@@ -214,9 +214,9 @@ public class MainPageCalculatorTest extends WebSettings {
     }
 
     @Description("Калькулятор на главной. Отображение стоимости по видам перевозки в соответствии с данными запроса к API. От адреса до адреса.")
-    @TmsLink("496524")
+    @TmsLink("000032")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C496524() {
+    public final void test_000032() {
         homePage
                 .openPage()
                 .waitFormLogoDellin()
@@ -243,9 +243,9 @@ public class MainPageCalculatorTest extends WebSettings {
     }
 
     @Description("Калькулятор на главной. Отображение стоимости по видам перевозки в соответствии с данными запроса к API. Выделенный транспорт.")
-    @TmsLink("353478")
+    @TmsLink("000033")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C353478() {
+    public final void test_000033() {
         homePage
                 .openPage()
                 .waitFormLogoDellin()
@@ -268,9 +268,9 @@ public class MainPageCalculatorTest extends WebSettings {
     }
 
     @Description("Калькулятор на главной. Отображение текста 'По запросу' для НП удаленных друг от друга, и не принадлежащих одной области.")
-    @TmsLink("353479")
+    @TmsLink("000034")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C353479() {
+    public final void test_000034() {
         homePage
                 .openPage()
                 .waitFormLogoDellin()
@@ -283,9 +283,9 @@ public class MainPageCalculatorTest extends WebSettings {
     }
 
     @Description("Калькулятор на главной. Выпадающий список в полях ввода направления.")
-    @TmsLink("283804")
+    @TmsLink("000035")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C283804() {
+    public final void test_000035() {
         homePage
                 .openPage()
                 .waitFormLogoDellin()
@@ -306,9 +306,9 @@ public class MainPageCalculatorTest extends WebSettings {
     }
 
     @Description("Калькулятор на главной. Определение города отправки по геопозиции")
-    @TmsLink("291503")
+    @TmsLink("000036")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C291503() {
+    public final void test_000036() {
         try {
             Location yarovoe = new Location(52.919704, 78.563568, 0);
             setLocation(yarovoe);

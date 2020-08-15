@@ -38,9 +38,9 @@ public class AddressTest extends WebSettings {
     }
 
     @Description("Представление раздела \"Адреса\"")
-    @TmsLink("498723")
+    @TmsLink("000012")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498723() {
+    public final void test_000012() {
         startTest();
         mapPage
                 .checkBaseElements()
@@ -55,9 +55,9 @@ public class AddressTest extends WebSettings {
     }
 
     @Description("Позиционирование карты терминалов")
-    @TmsLink("498724")
+    @TmsLink("000013")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498724() {
+    public final void test_000013() {
         String
                 parnas = "Парнас",
                 balasiha = "Балашиха";
@@ -77,9 +77,9 @@ public class AddressTest extends WebSettings {
     }
 
     @Description("Всплывающее сообщение для чек-бокса \"Груз тяжелый или крупный\"")
-    @TmsLink("498725")
+    @TmsLink("000014")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498725() {
+    public final void test_000014() {
         startTest();
         String textPopup = "Прием грузов от 80 кг и более 1.0 х 1.0 х 1.0 м\n" +
                 "Узнайте точные параметры в карточке терминала";
@@ -91,9 +91,9 @@ public class AddressTest extends WebSettings {
     }
 
     @Description("Поиск по городу")
-    @TmsLink("498741")
+    @TmsLink("000015")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498741() {
+    public final void test_000015() {
         startTest();
         mapPage
                 .findAddress("Омск")
@@ -103,9 +103,9 @@ public class AddressTest extends WebSettings {
     }
 
     @Description("Поиск по району города")
-    @TmsLink("498742")
+    @TmsLink("000016")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498742() {
+    public final void test_000016() {
         startTest();
         mapPage
                 .findAddress("Россия, Омская область, Большереченский район, село Ингалы")
@@ -116,9 +116,9 @@ public class AddressTest extends WebSettings {
     }
 
     @Description("Поиск по улице города")
-    @TmsLink("498743")
+    @TmsLink("000017")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498743() {
+    public final void test_000017() {
         startTest();
         mapPage
                 .findAddress("Россия, Омск, улица Крупской")
@@ -129,9 +129,9 @@ public class AddressTest extends WebSettings {
     }
 
     @Description("Отобразить Терминалы отправки грузов")
-    @TmsLink("498726")
+    @TmsLink("000018")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498726() {
+    public final void test_000018() {
         mapPage
                 .openPageCity(0)
                 .waitBaseElements()
@@ -146,9 +146,9 @@ public class AddressTest extends WebSettings {
     }
 
     @Description("Отобразить Терминалы получения грузов")
-    @TmsLink("498730")
+    @TmsLink("000019")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498730() {
+    public final void test_000019() {
         mapPage
                 .openPageCity(0)
                 .waitBaseElements()
@@ -164,9 +164,9 @@ public class AddressTest extends WebSettings {
 
 
     @Description("Отобразить Склады 3PL")
-    @TmsLink("498732")
+    @TmsLink("000020")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498732() {
+    public final void test_000020() {
         mapPage
                 .openPageCity(0)
                 .waitBaseElements()
@@ -181,9 +181,9 @@ public class AddressTest extends WebSettings {
     }
 
     @Description("Отобразить Офисы")
-    @TmsLink("498734")
+    @TmsLink("000021")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498734() {
+    public final void test_000021() {
         mapPage
                 .openPageCity(0)
                 .waitBaseElements()
@@ -198,9 +198,9 @@ public class AddressTest extends WebSettings {
     }
 
     @Description("Фильтрация по габаритам груза")
-    @TmsLink("498728")
+    @TmsLink("000022")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498728() {
+    public final void test_000022() {
         String smallLengthTerminal = getTerminalWith(SMALL_LENGTH, HEAVY_WEIGHT),
                 smallWidthTerminal = getTerminalWith(SMALL_WIDTH, HEAVY_WEIGHT),
                 smallHeightTerminal = getTerminalWith(SMALL_HEIGHT, HEAVY_WEIGHT),
@@ -228,9 +228,9 @@ public class AddressTest extends WebSettings {
     }
 
     @Description("Терминал с меткой \"Партнер\" (ПВЗ)")
-    @TmsLink("498727")
+    @TmsLink("000023")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498727() {
+    public final void test_000023() {
         String terminal = getTerminalWith(IS_ONLY_GIVEOUT, NOT_ONLY_RECEIVE, PVZ_TERMINAL);
         mapPage
                 .openPageCity(0)
@@ -243,9 +243,9 @@ public class AddressTest extends WebSettings {
     }
 
     @Description("Терминал с функцией \"Только отправка\"")
-    @TmsLink("498729")
+    @TmsLink("000024")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498729() {
+    public final void test_000024() {
         String
                 terminal = getTerminalWith(IS_ONLY_GIVEOUT, NOT_ONLY_RECEIVE, NOT_TEST_TERMINAL);
 
@@ -260,9 +260,9 @@ public class AddressTest extends WebSettings {
     }
 
     @Description("Терминал с функцией \"Только выдача\"")
-    @TmsLink("498731")
+    @TmsLink("000025")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498731() {
+    public final void test_000025() {
         String terminal = getTerminalWith(NOT_ONLY_GIVEOUT, IS_ONLY_RECEIVE, NOT_TEST_TERMINAL);
         mapPage
                 .openPageCity(0)
@@ -275,9 +275,9 @@ public class AddressTest extends WebSettings {
     }
 
     @Description("Список терминалов пуст")
-    @TmsLink("498733")
+    @TmsLink("000026")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C498733() {
+    public final void test_000027() {
         String text = "На этом участке нет терминалов\n" +
                 "Деловых Линий";
         mapPage

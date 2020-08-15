@@ -31,9 +31,9 @@ public class AddressTerminalTest extends WebSettings {
     }
 
     @Description("Наименование терминала")
-    @TmsLink("496573")
+    @TmsLink("000001")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C496573() {
+    public final void test_000001() {
         String terminal = getTerminalWith();
         step("Step 0. Предусловия", () ->
                 startTest(terminal));
@@ -42,9 +42,9 @@ public class AddressTerminalTest extends WebSettings {
     }
 
     @Description("Адрес терминала")
-    @TmsLink("497170")
+    @TmsLink("000002")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C497170() {
+    public final void test_000002() {
         String
                 terminal = getTerminalWith(NOT_EMPTY_ADDRESS),
                 address = getAddressOfTerminal(terminal);
@@ -55,9 +55,9 @@ public class AddressTerminalTest extends WebSettings {
     }
 
     @Description("Адрес терминала (не заполнен)")
-    @TmsLink("497171")
+    @TmsLink("000003")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C497171() {
+    public final void test_000003() {
         String
                 terminal = getTerminalWith(EMPTY_ADDRESS),
                 address = getAddressOfTerminal(terminal).trim(); // при пустом адресе пробел перед координатами отсутствует.
@@ -68,9 +68,9 @@ public class AddressTerminalTest extends WebSettings {
     }
 
     @Description("Координаты")
-    @TmsLink("497178")
+    @TmsLink("000004")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C497178() {
+    public final void test_000004() {
         String
                 terminal = getTerminalWith(NOT_EMPTY_COORDINATES),
                 address = getAddressOfTerminal(terminal);
@@ -81,9 +81,9 @@ public class AddressTerminalTest extends WebSettings {
     }
 
     @Description("Текущее время (+4 по МСК)")
-    @TmsLink("496574")
+    @TmsLink("000005")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C496574() {
+    public final void test_000005() {
         String terminal = getTerminalWith(TIMESHIFT_ABOVE_ZERO);
         int timezone = getTimezone(terminal);
         step("Step 0. Предусловия", () ->
@@ -93,9 +93,9 @@ public class AddressTerminalTest extends WebSettings {
     }
 
     @Description("Текущее время (+0 по МСК)")
-    @TmsLink("497174")
+    @TmsLink("000006")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C497174() {
+    public final void test_000006() {
         String terminal = getTerminalWith(TIMESHIFT_EQUAL_ZERO);
         int timezone = getTimezone(terminal);
         step("Step 0. Предусловия", () ->
@@ -105,9 +105,9 @@ public class AddressTerminalTest extends WebSettings {
     }
 
     @Description("Текущее время (-1 по МСК)")
-    @TmsLink("497175")
+    @TmsLink("000007")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C497175() {
+    public final void test_000007() {
         String terminal = getTerminalWith(TIMESHIFT_LESS_THAN_ZERO);
         int timezone = getTimezone(terminal);
         step("Step 0. Предусловия", () ->
@@ -117,9 +117,9 @@ public class AddressTerminalTest extends WebSettings {
     }
 
     @Description("Телефоны")
-    @TmsLink("497179")
+    @TmsLink("000008")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C497179() {
+    public final void test_000008() {
         String terminal = getTerminalWith(PHONES_IS_EXIST);
         List<String> phones = getTerminalPhones(terminal);
         step("Step 0. Предусловия", () ->
@@ -129,9 +129,9 @@ public class AddressTerminalTest extends WebSettings {
     }
 
     @Description("Телефон (не указан)")
-    @TmsLink("496575")
+    @TmsLink("000009")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C496575() {
+    public final void test_000009() {
         String terminal = getTerminalWith(PHONES_IS_EMPTY);
         List<String> phones = getTerminalPhones(terminal);
         step("Step 0. Предусловия", () ->
@@ -141,9 +141,9 @@ public class AddressTerminalTest extends WebSettings {
     }
 
     @Description("Емейл")
-    @TmsLink("497173")
+    @TmsLink("000010")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C497173() {
+    public final void test_000010() {
         String terminal = getTerminalWith(EMAIL_IS_EXIST);
         String email = getTerminalEmail(terminal);
         step("Step 0. Предусловия", () ->
@@ -153,9 +153,9 @@ public class AddressTerminalTest extends WebSettings {
     }
 
     @Description("График работы терминала (не заполнен)")
-    @TmsLink("497180")
+    @TmsLink("000011")
     @Test(retryAnalyzer = Retry.class)
-    public final void test_C497180() {
+    public final void test_000011() {
         String terminal = getTerminalWith(WORKTABLES_IS_EMPTY);
         step("Step 0. Предусловия", () ->
                 startTest(terminal));
